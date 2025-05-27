@@ -15,7 +15,6 @@ form.addEventListener("submit", e => {
     // Mostrar el modal
     modal.style.display = "flex";
 
-    // Cerrar automáticamente después de 2 segundos (2000 ms)
     setTimeout(() => {
       modal.style.display = "none";
       window.location.href = "index.html";
@@ -26,13 +25,6 @@ form.addEventListener("submit", e => {
     alert("Hubo un error al enviar!");
   });
 });
-
-
-
-
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -49,3 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+
+
+const toggleBtn = document.getElementById("btn-report");
+const formAdmin = document.getElementById("formulario");
+
+toggleBtn.addEventListener("click", () => {
+  if (formAdmin.style.display === "none" || formAdmin.style.display === "") {
+    formAdmin.style.display = "block";
+    toggleBtn.textContent = "Cerrar formulario"; // Cambia a un símbolo de "menos"
+  } else {
+    formAdmin.style.display = "none";
+    toggleBtn.textContent = "Nuevo reporte"; // Vuelve al símbolo de "más"
+  }
+});
