@@ -5,43 +5,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Formulario a Google Sheets</title>
+    <title>Formulario | Soporte técnico</title>
+    <link rel="icon" href="/img/icon.ico" type="image/png">
+
 </head>
 
 <body>
-    <h1>Soporte técnico</h1>
-    <form id="formulario">
-        <div class="name-container">
-            <label>Nombre:</label>
-            <input type="text" name="name" required>
-        </div>
+    <header>
+        <img class="logo" src="/img/logo_t.png" alt="logo.png">
+        <h1>SOPORTE<br>TÉCNICO</h1>
+    </header>
 
-        <div class="building-container">
-            <label>Edificio:</label>
-            <input type="text" name="building" required>
-        </div>
+    <main>
+        <p class="subtitle">Ingresa para reportar</p>
+        <form class="formulario" id="formulario" >
+            <div class="input-container">
+                <label>Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+            </div>
 
-        <div class="classroom-container">
-            <label>Aula/Lab:</label>
-            <input type="text" name="classroom" required>
-        </div>
+            <div class="input-container">
+                <label>Contraseña:</label>
+                <input type="text" id="password" name="password" placeholder="Solo para administradores*">
+            </div>
 
-        <div class="machine-container">
-            <label>Maquina:</label>
-            <input type="text" name="machine" required>
-        </div>
+            <button class="btn-form" type="button" onclick="logIn()">Iniciar sesión</button>
+        </form>
+    </main>
 
-        <div class="issue-container">
-            <label>Problema:</label>
-            <input type="text" name="issue" placeholder="Breve descripción del problema" required>
-        </div>
-        
-        <button type="submit">Enviar</button>
-    </form>
+    <script src="login.js"></script>
 
-    <p id="estado"></p>
-
-    <script src="main.js"></script>
 </body>
 
 </html>

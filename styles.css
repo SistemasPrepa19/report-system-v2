@@ -9,3 +9,84 @@ body {
     padding: 0;
 }
 
+.logo {
+    width: 40%;
+    margin: 0 5px;
+    filter: invert(100%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #536b8b;
+    height: 100px;
+}
+
+header h1 {
+    width: 55%;
+    padding: 5px 15px;
+    margin: 0 5px;
+    color: aliceblue;
+    background-color: #5c7293;
+    align-items: center;
+}
+
+.subtitle {
+    background-color: #536b8b;
+    color: white;
+    font-weight: bold;
+    border: solid 1px #536b8b;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+main {
+    padding: 0px 15px;
+}
+
+.formulario {
+    border: solid 1px #536b8b;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: #536b8b;
+    color: aliceblue;
+}
+
+.input-container label {
+    padding: 5px; 
+    font-weight: bold;
+}
+
+.input-container input, textarea {
+    padding: 5px;
+    color: black;
+}
+
+.btn-form {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #5c7293;
+    font-size: 18px;
+}
+
+
+/* 
+#536b8b
+#5c7293
+#318ce7 
+*/
+
+

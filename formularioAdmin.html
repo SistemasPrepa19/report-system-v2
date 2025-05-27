@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formulario | Soporte técnico</title>
+    <link rel="icon" href="/img/icon.ico" type="image/png">
+
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/img/logo_t.png" alt="logo.png">
+        <h1>SOPORTE<br>TÉCNICO</h1>
+    </header>
+
+    <main>
+        <p class="subtitle">ADMINISTRADOR SOPORTE</p>
+        <form class="formulario" id="formulario" >
+            <div class="input-container">
+                <label>Nombre:</label>
+                <input type="text" name="name" placeholder="Nombre completo" required>
+            </div>
+
+            <div class="input-container">
+                <label>Edificio:</label>
+                <input type="text" name="building" placeholder="Edificio o lugar" required>
+            </div>
+
+            <div class="input-container">
+                <label>Aula/Lab:</label>
+                <input type="text" name="classroom" placeholder="Aula o laboratorio" required>
+            </div>
+
+            <div class="input-container">
+                <label>Maquina:</label>
+                <input type="text" name="machine" placeholder="Maquina o dispositivo" required>
+            </div>
+
+            <div class="input-container">
+                <label>Problema:</label>
+                <textarea type="text" class="issue" name="issue" placeholder="Breve descripción del problema o situación" required rows="2" cols="40"></textarea>
+            </div>
+
+            <button class="btn-form" type="submit">Reportar</button>
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
