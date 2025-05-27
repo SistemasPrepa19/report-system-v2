@@ -11,13 +11,21 @@
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="/img/logo_t.png" alt="logo.png">
+    <header style="background-color: white; width: 100%;">
+        <img class="logo" src="/img/logo.png" alt="logo.png" style="filter: none; background-color: white;">
         <h1>SOPORTE<br>TÉCNICO</h1>
     </header>
 
-    <main>
-        <p class="subtitle">ADMINISTRADOR SOPORTE</p>
+    <main style="height: 90vh; margin-bottom: 50px;">
+        <p class="subtitle"
+            style="
+                background-color: #3a3a3c;
+                color: white;
+                border: solid 1px red;
+                box-shadow: inset 0px 0px 0px 1px gold;
+            ">
+            ADMINISTRADOR
+        </p>
         <form class="formulario" id="formulario" >
             <div class="input-container">
                 <label>Nombre:</label>
@@ -44,9 +52,25 @@
                 <textarea type="text" class="issue" name="issue" placeholder="Breve descripción del problema o situación" required rows="2" cols="40"></textarea>
             </div>
 
+            <div class="input-container">
+                <label>Solución:</label>
+                <textarea type="text" name="solution" placeholder="Breve descripción de la solución" required rows="2" cols="40"></textarea>
+            </div>
+
             <button class="btn-form" type="submit">Reportar</button>
         </form>
     </main>
+
+    
+
+    <!-- Modal de éxito -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="icon">✔️</div>
+            <h2>Se agregó correctamente</h2>
+            <p>El reporte de agregó a la bitácora</p>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

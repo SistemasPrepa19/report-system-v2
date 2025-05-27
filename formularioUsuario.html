@@ -18,10 +18,12 @@
 
     <main>
         <p class="subtitle">Por favor, rellena todos los campos</p>
-        <form class="formulario" id="formulario" >
+        <form class="formulario" id="formulario">
             <div class="input-container">
                 <label>Nombre:</label>
-                <input type="text" name="name" placeholder="Nombre completo" required>
+                <!-- <input type="text" name="name" placeholder="Nombre completo" required> -->
+                <span id="nombre-usuario"
+                    style="background-color: white; color: gray; padding: 5px; display: inline-block; font-weight: bold;"></span>
             </div>
 
             <div class="input-container">
@@ -41,12 +43,24 @@
 
             <div class="input-container">
                 <label>Problema:</label>
-                <textarea type="text" class="issue" name="issue" placeholder="Breve descripción del problema o situación" required rows="2" cols="40"></textarea>
+                <textarea type="text" class="issue" name="issue"
+                    placeholder="Breve descripción del problema o situación" required rows="2" cols="40"></textarea>
             </div>
 
             <button class="btn-form" type="submit">Reportar</button>
         </form>
     </main>
+
+
+
+    <!-- Modal de éxito -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="icon">✔️</div>
+            <h2>Se reportó exitosamente</h2>
+            <p>Gracias por tu reporte, se atenderá a la brevedad</p>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

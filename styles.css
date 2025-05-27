@@ -25,7 +25,7 @@ header {
 header h1 {
     width: 55%;
     padding: 5px 15px;
-    margin: 0 5px;
+    margin: 0px;
     color: aliceblue;
     background-color: #5c7293;
     align-items: center;
@@ -90,3 +90,40 @@ main {
 */
 
 
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+}
+.modal-content .icon {
+  font-size: 48px;
+  color: green;
+  margin-bottom: 10px;
+}
+.modal-content h2 {
+  margin: 0 0 10px;
+}
+.modal-content p {
+  margin: 0 0 20px;
+  color: #555;
+}
+.close {
+  position: absolute;
+  top: 8px; right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+}
