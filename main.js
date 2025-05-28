@@ -1,8 +1,13 @@
 const form = document.getElementById("formulario");
 const modal = document.getElementById("successModal");
+const submitBtn = form.querySelector('button[type="submit"]'); // Selecciona el botón de enviar
 
 form.addEventListener("submit", e => {
   e.preventDefault();
+
+  // Inhabilita el botón al hacer clic
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Enviando...";
 
   fetch("https://script.google.com/macros/s/AKfycbxRvwLtT67oQzoq6yCTsWH_2_OWbScnYYkVsHWcDtrzVrVSoAhxZ78W2lIXnYlUcZE1rw/exec", {
     method: "POST",
@@ -12,7 +17,6 @@ form.addEventListener("submit", e => {
     body: new URLSearchParams(new FormData(form))
   })
   .then(() => {
-    // Mostrar el modal
     modal.style.display = "flex";
 
     setTimeout(() => {
@@ -23,8 +27,13 @@ form.addEventListener("submit", e => {
   .catch(err => {
     console.error(err);
     alert("Hubo un error al enviar!");
+
+    // Rehabilita el botón si hay un error
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Reportar";
   });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -46,17 +55,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const toggleBtn = document.getElementById("btn-report");
 const formAdmin = document.getElementById("formulario");
+const formAdminDesk = document.querySelector(".form-admin");
 const reportList = document.getElementById("report-list");
 
 toggleBtn.addEventListener("click", () => {
-  if (formAdmin.style.display === "none" || formAdmin.style.display === "") {
+  if (formAdmin.style.display === "none" || formAdmin.style.display === "" || formAdminDesk.style.display === "none" || formAdminDesk.style.display === "") {
     formAdmin.style.display = "block";
+    formAdminDesk.style.display = "block";
     reportList.style.display = "none"; 
-    toggleBtn.textContent = "Cerrar"; // Cambia a un símbolo de "menos"
+    toggleBtn.textContent = "Cerrar"; 
   } else {
     formAdmin.style.display = "none";
+    formAdminDesk.style.display = "none";
     reportList.style.display = "block";
-    toggleBtn.textContent = "Nuevo reporte"; // Vuelve al símbolo de "más"
+    toggleBtn.textContent = "Nuevo reporte";
   }
 });
 

@@ -1,0 +1,157 @@
+/* Estilos para móviles */
+@media (max-width: 767px) {
+
+}
+
+/* Estilos para escritorio */
+@media (min-width: 1024px) {
+    .logo {
+        width: 12%;
+        margin: 0 15px;
+        filter: invert(100%);
+    }
+
+    header h1 {
+        width: 85%;
+        font-size: 60px;
+    }
+
+    h1 br {
+        display: none;
+        content: " ";
+    }
+
+    main {
+        display: flex;
+    }
+
+    .left {
+        width: 30%;
+        padding: 15px;
+    }
+
+    .right {
+        display: block;
+        margin: 15px;
+        width: 60%;
+    }
+
+    .info-container {
+        border: solid 1px #536b8b;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .info-container label {
+        padding: 5px; 
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        background-color: #536b8b;
+        color: aliceblue;
+    }
+
+    .info-container p {
+        padding: 5px;
+        margin: 3px 0;
+        background-color: white;
+        color: rgb(46, 46, 46);
+        border: solid 1px gray;
+    }
+
+    .main-admin .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        width: 15%;
+        padding: 0px;
+        align-items: center;
+        justify-content: unset;
+        gap: 0;
+    }
+
+    .btn-report {
+        width: 170px;
+        margin: 20px 0;
+        padding: 10px 0px
+    }
+
+    .main-admin {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .report-list {
+        margin: 25px 15px 25px 25px;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .s-b {
+        margin: 5px 0px;
+        border-radius: 10px 10px 0px 0px;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .report-table {
+        font-size: 15px;
+    }
+
+    .form-admin {
+        border: solid 1px #536b8b;
+        padding: 5px;
+        background-color: white;
+        border-radius: 10px;
+        margin: 20px 10px 25px -10px;
+        width: 30%;
+        font-size: 20px;
+        display: none;
+
+    }
+
+    .inputs {
+        width: 100%;
+    }
+
+    .text-spaces {
+        width: 100%;
+    }
+
+    .logOut-container {
+        display: flex;
+        background-color: #536b8b;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0px;
+        width: 14%;
+    }
+
+    .main-user {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -30px;
+    }
+
+    .formulario {
+        border: solid 1px #536b8b;
+        padding: 10px;
+        background-color: white;
+        border-radius: 10px;
+        width: 50%;
+    }
+
+    .left .formulario {
+        width: 100%;
+    }
+
+    .sub-u {
+        width: 50%;
+    }
+}

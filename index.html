@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_desk.css" />
     <title>Iniciar Sesión | Soporte técnico</title>
     <link rel="icon" href="/img/icon.ico" type="image/png">
 
@@ -13,24 +14,38 @@
 <body>
     <header>
         <img class="logo" src="/img/logo_t.png" alt="logo.png">
-        <h1>SOPORTE<br>TÉCNICO</h1>
+        <h1>SOPORTE <br>TÉCNICO</h1>
     </header>
 
     <main>
-        <p class="subtitle">Bienvenido, ingresa para reportar</p>
-        <form class="formulario" id="formulario">
-            <div class="input-container">
-                <label>Nombre:</label>
-                <input type="text" id="name" name="name" placeholder="Nombre completo" required>
-            </div>
+        <div class="left">
+            <p class="subtitle">Bienvenido, ingresa para reportar</p>
+            <form class="formulario" id="formulario">
+                <div class="input-container">
+                    <label>Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                </div>
 
-            <div class="input-container">
-                <label>Contraseña:</label>
-                <input type="text" id="password" name="password" placeholder="Solo para administradores*">
-            </div>
+                <div class="input-container">
+                    <label>Contraseña:</label>
+                    <input type="text" id="password" name="password" placeholder="Solo para administradores*">
+                </div>
 
-            <button class="btn-form" type="button" onclick="logIn()">Iniciar sesión</button>
-        </form>
+                <button class="btn-form" type="button" onclick="logIn()">Iniciar sesión</button>
+            </form>
+        </div>
+
+        <div class="right">
+            <p class="subtitle">Sistema para solicitar soporte técnico al área de sistemas</p>
+            <div class="info-container">
+                <label>Información importante</label>
+                <p>Para poder reportar ingresa tu nombre, <u>el apellido es opcional</u> , tus datos no serán compartidos.</p>
+                <p><u>Evita mandar</u> mas de un reporte al solicitar apoyo, esto no provocara saturacion de reportes.</p>
+                <p>Una vez realizado el reporte, se atenderá a la <u>brevedad</u>.</p>
+                <p>Llena <u>todos los campos</u> para atender mejor el reporte.</p>
+            </div>
+            
+        </div>
     </main>
 
     <script src="login.js"></script>

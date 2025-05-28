@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_desk.css" />
     <title>Formulario | Soporte técnico</title>
     <link rel="icon" href="/img/icon.ico" type="image/png">
 
@@ -13,13 +14,15 @@
 <body>
     <header style="background-color: white; width: 100%;">
         <img class="logo" src="/img/logo.png" alt="logo.png" style="filter: none; background-color: white;">
-        <h1>SOPORTE<br>TÉCNICO</h1>
+        <h1>SOPORTE <br>TÉCNICO</h1>
     </header>
 
-    <main style="height: auto; margin-bottom: 50px;">
+    <main style="height: auto; margin-bottom: 50px;" class="main-admin">
 
         <div class="buttons">
-            <a class="btn-report a-report" href="https://docs.google.com/spreadsheets/d/1BKl7Q3_hT-V0qACR9_P2sNMCkORBxt4J5hWcdTmHhnA/edit?pli=1&gid=0#gid=0" target="_blank">
+            <a class="btn-report a-report"
+                href="https://docs.google.com/spreadsheets/d/1BKl7Q3_hT-V0qACR9_P2sNMCkORBxt4J5hWcdTmHhnA/edit?pli=1&gid=0#gid=0"
+                target="_blank">
                 Ver bitácora
             </a>
             <button id="btn-report" class="btn-report">
@@ -30,7 +33,6 @@
         <div class="report-list" id="report-list">
             <p class="subtitle s-b">
                 Bitácora de reportes
-                <!-- Añadimos aquí el icono de refrescar -->
                 <button id="refreshBtn" class="refresh-btn" title="Actualizar">
                     ↺
                 </button>
@@ -49,45 +51,51 @@
                     <!-- Se agregan filas dinámicamente aquí -->
                 </tbody>
             </table>
-            <p style="font-size: 12px; color: rgba(128, 128, 128, 0.513); margin: 2px; text-align: center;">*Latencia de actualización: puede ser de 5s a 30s</p>
+            <p style="font-size: 12px; color: rgba(128, 128, 128, 0.513); margin: 2px; text-align: center;">*La latencia
+                de actualización puede ser de 5s a 30s</p>
         </div>
 
         <script src="report.js"></script>
 
         <form style="display: none; margin-bottom: 15px;" class="formulario form-admin" id="formulario">
-            <div class="input-container">
-                <label>Nombre:</label>
-                <input type="text" name="name" placeholder="Nombre completo" required>
+            <div class="inputs">
+                <div class="input-container">
+                    <label>Nombre:</label>
+                    <input type="text" name="name" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="input-container">
+                    <label>Edificio:</label>
+                    <input type="text" name="building" placeholder="Edificio o lugar" required>
+                </div>
+
+                <div class="input-container">
+                    <label>Aula/Lab:</label>
+                    <input type="text" name="classroom" placeholder="Aula o laboratorio" required>
+                </div>
+
+                <div class="input-container">
+                    <label>Maquina:</label>
+                    <input type="text" name="machine" placeholder="Maquina o dispositivo" required>
+                </div>
             </div>
 
-            <div class="input-container">
-                <label>Edificio:</label>
-                <input type="text" name="building" placeholder="Edificio o lugar" required>
+            <div class="text-spaces">
+                <div class="input-container">
+                    <label>Problema:</label>
+                    <textarea type="text" class="issue" name="issue"
+                        placeholder="Breve descripción del problema o situación" required rows="2" cols="40"></textarea>
+                </div>
+
+                <div class="input-container">
+                    <label>Solución:</label>
+                    <textarea type="text" name="solution" placeholder="Breve descripción de la solución" required
+                        rows="2" cols="40"></textarea>
+                </div>
+                <button class="btn-form" type="submit">Listo</button>
             </div>
 
-            <div class="input-container">
-                <label>Aula/Lab:</label>
-                <input type="text" name="classroom" placeholder="Aula o laboratorio" required>
-            </div>
 
-            <div class="input-container">
-                <label>Maquina:</label>
-                <input type="text" name="machine" placeholder="Maquina o dispositivo" required>
-            </div>
-
-            <div class="input-container">
-                <label>Problema:</label>
-                <textarea type="text" class="issue" name="issue"
-                    placeholder="Breve descripción del problema o situación" required rows="2" cols="40"></textarea>
-            </div>
-
-            <div class="input-container">
-                <label>Solución:</label>
-                <textarea type="text" name="solution" placeholder="Breve descripción de la solución" required rows="2"
-                    cols="40"></textarea>
-            </div>
-
-            <button class="btn-form" type="submit">Reportar</button>
         </form>
 
 
@@ -107,9 +115,11 @@
     <div id="solveModal" class="modal">
         <div class="modal-content">
             <h2>Escribe la solución</h2>
-            <textarea id="solveText" rows="4" style="width: 100%;"></textarea>
-            <button id="solveSend">Guardar</button>
-            <button id="solveCancel">Cancelar</button>
+            <textarea id="solveText" rows="4" style="width: 222px;"></textarea>
+            <div class="modal-buttons">
+                <button id="solveCancel">Cancelar</button>
+                <button id="solveSend">Guardar</button>
+            </div>
         </div>
     </div>
 

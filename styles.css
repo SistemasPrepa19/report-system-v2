@@ -12,7 +12,11 @@ body {
 a {
     text-decoration: none;
     color: white;
-    
+
+}
+
+.right {
+    display: none;
 }
 
 .logo {
@@ -106,6 +110,26 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+.modal-buttons {
+    display: flex;
+    justify-content: end;
+}
+
+#solveSend, #solveCancel {
+    background: #5c7293;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 0 0 0 5px;
+}
+
+#solveCancel {
+    background: #d9534f; /* rojo */
+    color: white;
+}
+
 .modal-content {
   background: #fff;
   padding: 20px;
