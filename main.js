@@ -4,7 +4,7 @@ const modal = document.getElementById("successModal");
 form.addEventListener("submit", e => {
   e.preventDefault();
 
-  fetch("https://script.google.com/macros/s/AKfycby7HhGc49H6tQ_2OcuM0sk3zDOL1vGkgBsqSFultaQEJwiFZlV-Aq-VQOtrU1NioHi92g/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbxRvwLtT67oQzoq6yCTsWH_2_OWbScnYYkVsHWcDtrzVrVSoAhxZ78W2lIXnYlUcZE1rw/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
