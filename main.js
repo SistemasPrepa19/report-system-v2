@@ -4,7 +4,7 @@ const modal = document.getElementById("successModal");
 form.addEventListener("submit", e => {
   e.preventDefault();
 
-  fetch("https://script.google.com/macros/s/AKfycbzNmjAiZWYZjaITJzuuAwWAjypkSJX8fsYeoEX08EVy2i4g6lQhON-T18HHX8f_76rTZA/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby7HhGc49H6tQ_2OcuM0sk3zDOL1vGkgBsqSFultaQEJwiFZlV-Aq-VQOtrU1NioHi92g/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
@@ -55,4 +55,9 @@ toggleBtn.addEventListener("click", () => {
     formAdmin.style.display = "none";
     toggleBtn.textContent = "Nuevo reporte"; // Vuelve al símbolo de "más"
   }
+});
+
+const logOutBtn = document.getElementById("logOut");
+logOutBtn.addEventListener("click", () => {
+  window.location.href = "index.html";
 });
