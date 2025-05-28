@@ -46,13 +46,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const toggleBtn = document.getElementById("btn-report");
 const formAdmin = document.getElementById("formulario");
+const reportList = document.getElementById("report-list");
 
 toggleBtn.addEventListener("click", () => {
   if (formAdmin.style.display === "none" || formAdmin.style.display === "") {
     formAdmin.style.display = "block";
-    toggleBtn.textContent = "Cerrar formulario"; // Cambia a un símbolo de "menos"
+    reportList.style.display = "none"; 
+    toggleBtn.textContent = "Cerrar"; // Cambia a un símbolo de "menos"
   } else {
     formAdmin.style.display = "none";
+    reportList.style.display = "block";
     toggleBtn.textContent = "Nuevo reporte"; // Vuelve al símbolo de "más"
   }
 });

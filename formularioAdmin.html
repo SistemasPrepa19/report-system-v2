@@ -18,7 +18,41 @@
 
     <main style="height: auto; margin-bottom: 50px;">
 
-        <button id="btn-report" class="btn-report">Nuevo reporte</button>
+        <div class="buttons">
+            <a class="btn-report a-report" href="https://docs.google.com/spreadsheets/d/1BKl7Q3_hT-V0qACR9_P2sNMCkORBxt4J5hWcdTmHhnA/edit?pli=1&gid=0#gid=0" target="_blank">
+                Ver bitácora
+            </a>
+            <button id="btn-report" class="btn-report">
+                Nuevo reporte
+            </button>
+        </div>
+
+        <div class="report-list" id="report-list">
+            <p class="subtitle s-b">
+                Bitácora de reportes
+                <!-- Añadimos aquí el icono de refrescar -->
+                <button id="refreshBtn" class="refresh-btn" title="Actualizar">
+                    ↺
+                </button>
+            </p>
+            <table class="report-table" id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edificio</th>
+                        <th>Aula/Lab</th>
+                        <th>Maquina</th>
+                        <th>Problema</th>
+                    </tr>
+                </thead>
+                <tbody id="reportBody">
+                    <!-- Se agregan filas dinámicamente aquí -->
+                </tbody>
+            </table>
+            <p style="font-size: 12px; color: rgba(128, 128, 128, 0.513); margin: 2px; text-align: center;">*Latencia de actualización: puede ser de 5s a 30s</p>
+        </div>
+
+        <script src="report.js"></script>
 
         <form style="display: none; margin-bottom: 15px;" class="formulario form-admin" id="formulario">
             <div class="input-container">
@@ -56,27 +90,6 @@
             <button class="btn-form" type="submit">Reportar</button>
         </form>
 
-        <div class="report-list">
-            <p class="subtitle s-b">Bitácora de reportes</p>
-            <table class="report-table" id="reportTable">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Edificio</th>
-                        <th>Aula/Lab</th>
-                        <th>Maquina</th>
-                        <th>Problema</th>
-                    </tr>
-                </thead>
-                <tbody id="reportBody">
-                    <!-- Se agregan filas dinámicamente aquí -->
-                </tbody>
-            </table>
-        </div>
-
-        <script src="report.js"></script>
-
-
 
     </main>
 
@@ -91,18 +104,18 @@
     </div>
 
     <!-- Modal para escribir la solución -->
-<div id="solveModal" class="modal">
-  <div class="modal-content">
-    <h2>Escribe la solución</h2>
-    <textarea id="solveText" rows="4" style="width: 100%;"></textarea>
-    <button id="solveSend">Guardar</button>
-    <button id="solveCancel">Cancelar</button>
-  </div>
-</div>
+    <div id="solveModal" class="modal">
+        <div class="modal-content">
+            <h2>Escribe la solución</h2>
+            <textarea id="solveText" rows="4" style="width: 100%;"></textarea>
+            <button id="solveSend">Guardar</button>
+            <button id="solveCancel">Cancelar</button>
+        </div>
+    </div>
 
 
-<div class="logOut-container">
-        <button class="btn-logOut" id="logOut">Cerrar sesión</button>
+    <div class="logOut-container">
+        <button class="btn-logOut" id="logOut">← Cerrar sesión</button>
     </div>
 
 

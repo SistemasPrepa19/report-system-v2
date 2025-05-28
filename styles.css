@@ -9,6 +9,12 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    
+}
+
 .logo {
     width: 40%;
     margin: 0 5px;
@@ -122,6 +128,16 @@ main {
   color: #555;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.a-report {
+    text-decoration: none;
+}
+
 
 .btn-report {
     background-color: #536b8b;
@@ -142,12 +158,14 @@ main {
     border-radius: 10px;
     padding: 5px;
     padding-top: 0px;
-    margin-bottom: 150px;
+    margin-bottom: 15px;
+    display: block;
 }
 
 .s-b {
     margin: 5px 0px;
     border-radius: 10px 10px 0px 0px;
+    text-align: end;
 }
 
 .report-table {
@@ -164,4 +182,35 @@ main {
     border: solid 1px #536b8b;
 }
 
+.refresh-btn {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    margin-left: 25px;
+}
 
+.refresh-btn:focus {
+  transform: rotate(-720deg);
+  transition: transform 3s ease;
+}
+
+.logOut-container {
+    display: flex;
+    background-color: #536b8b;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.btn-logOut {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+}
