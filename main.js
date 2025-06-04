@@ -9,7 +9,7 @@ form.addEventListener("submit", e => {
   submitBtn.disabled = true;
   submitBtn.textContent = "Enviando...";
 
-  fetch("https://script.google.com/macros/s/AKfycbxRvwLtT67oQzoq6yCTsWH_2_OWbScnYYkVsHWcDtrzVrVSoAhxZ78W2lIXnYlUcZE1rw/exec", {
+  fetch("https://script.google.com/macros/s/AKfycby8BE5V0ItSipZ13-IasARLhhR4GUjwYTkLkRwOPL-QjDIerYYSfqKYQXNPKjAPhTS_SA/exec", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded"
