@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!solution) return alert("Escribe algo antes de guardar.");
 
     btnSend.disabled = true;
-    fetch("https://script.google.com/macros/s/AKfycby8BE5V0ItSipZ13-IasARLhhR4GUjwYTkLkRwOPL-QjDIerYYSfqKYQXNPKjAPhTS_SA/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzdR4Ybm_nALdiFfu_AAm83VftUJwbLRP5hwtFLFiCRnEu9hVeo0oWH3dQAvIulzZOBBg/exec", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({ row: currentRow, solution })
